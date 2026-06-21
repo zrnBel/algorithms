@@ -18,7 +18,7 @@ int main() {
       std::cout << res.a << ' ' << res.b;
     }
   } else {
-    std::cout << -1;
+    std::cout << -1 << std::endl;
   }
   return 0;
 }
