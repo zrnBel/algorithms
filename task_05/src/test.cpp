@@ -87,7 +87,7 @@ TEST(DailyTemperaturesCorner, PeakAtBeginning) {
 }
 
 TEST(DailyTemperaturesCorner, PeakAtEnd) {
-  std::vector<int> expected = {4, 3, 2, 1, 0};
+  std::vector<int> expected = {1, 1, 1, 1, 0};
 
   ASSERT_EQ(TopologySort(5, {1, 2, 3, 4, 100}), expected);
 }
