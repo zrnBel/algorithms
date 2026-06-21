@@ -21,7 +21,6 @@ class AvlTree {
   int Size() const;
 
  private:
-
   static int Height(Node* node);
   static int SizeOf(Node* node);
   static int BalanceFactor(Node* node);

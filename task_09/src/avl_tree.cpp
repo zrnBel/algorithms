@@ -1,7 +1,6 @@
 #include "avl_tree.hpp"
 
-Node::Node(int k)
-    : key(k), height(1), size(1), left(nullptr), right(nullptr) {}
+Node::Node(int k) : key(k), height(1), size(1), left(nullptr), right(nullptr) {}
 
 AvlTree::AvlTree() : root_(nullptr) {}
 

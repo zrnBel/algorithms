@@ -26,10 +26,9 @@ TableAnalyzer::TableAnalyzer(const std::vector<std::vector<int>>& table) {
 }
 
 std::string TableAnalyzer::CheckRange(const Request& request) const {
-    if (best_[request.l - 1] >= request.r - 1)
-      return "Yes";
-    return "No";
-  }
+  if (best_[request.l - 1] >= request.r - 1) return "Yes";
+  return "No";
+}
 
 std::vector<std::string> TableAnalyzer::CheckRanges(
     const std::vector<Request>& requests) const {

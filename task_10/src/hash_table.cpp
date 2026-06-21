@@ -13,13 +13,11 @@ HashTable::HashTable(int initial_capacity)
       size_(0) {}
 
 int HashTable::BucketIndex(int key, int capacity) const {
-  unsigned int hashed =
-      static_cast<unsigned int>(key);
+  unsigned int hashed = static_cast<unsigned int>(key);
 
   hashed *= kHashPrime;
 
-  return static_cast<int>(
-      hashed % capacity);
+  return static_cast<int>(hashed % capacity);
 }
 
 void HashTable::Rehash() {
@@ -28,7 +26,7 @@ void HashTable::Rehash() {
 
   for (std::size_t i = 0; i != buckets_.size(); ++i) {
     for (std::size_t j = 0; j != buckets_[i].size(); ++j) {
-      int index {BucketIndex(buckets_[i][j].first, new_capacity)};
+      int index{BucketIndex(buckets_[i][j].first, new_capacity)};
       new_buckets[index].push_back(buckets_[i][j]);
     }
   }
@@ -47,8 +45,7 @@ void HashTable::Insert(int key, int value) {
   }
 
   double load_factor =
-      static_cast<double>(size_ + 1) /
-      static_cast<double>(buckets_.size());
+      static_cast<double>(size_ + 1) / static_cast<double>(buckets_.size());
 
   if (load_factor > kMaxLoadFactor) {
     Rehash();
@@ -95,10 +92,6 @@ bool HashTable::Contains(int key) {
   return false;
 }
 
-int HashTable::Size() const {
-  return size_;
-}
+int HashTable::Size() const { return size_; }
 
-bool HashTable::Empty() const {
-  return size_ == 0;
-}
+bool HashTable::Empty() const { return size_ == 0; }

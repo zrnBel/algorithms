@@ -14,7 +14,8 @@ class TableAnalyzer {
 
   std::string CheckRange(const Request& request) const;
 
-  std::vector<std::string> CheckRanges(const std::vector<Request>& requests) const;
+  std::vector<std::string> CheckRanges(
+      const std::vector<Request>& requests) const;
 
  private:
   std::vector<int> best_;

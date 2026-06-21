@@ -46,7 +46,7 @@ void SiftUp(int begin, int end, std::vector<int>& vec) {
 
 std::vector<int> ConstructHeap(const std::vector<int>& vec) {
   std::vector<int> heap = vec;
-  for (int i {static_cast<int>(heap.size()) / 2 - 1}; i >= 0; --i)
+  for (int i{static_cast<int>(heap.size()) / 2 - 1}; i >= 0; --i)
     SiftDown(i, heap.size(), heap);
   return heap;
 }

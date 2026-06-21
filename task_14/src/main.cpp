@@ -3,7 +3,7 @@
 #include "tables.hpp"
 
 int main() {
-  std::size_t n,m,k;
+  std::size_t n, m, k;
   std::cin >> n >> m >> k;
 
   std::vector<std::vector<int>> table(n, std::vector<int>(m));
@@ -17,7 +17,7 @@ int main() {
 
   std::vector<Request> requests(k);
   for (std::size_t i{0}; i != k; ++i) {
-    std::size_t l,r;
+    std::size_t l, r;
     std::cin >> l >> r;
     requests[i] = Request{l, r};
   }
