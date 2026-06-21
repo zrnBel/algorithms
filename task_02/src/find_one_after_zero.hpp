@@ -1,8 +1,6 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <iterator>
 #include <vector>
 
-std::vector<int> ConstructIntVector();
-
-void FindOneAfterZero();
+int FindOneAfterZero(std::size_t size, const std::vector<int>& vec);
