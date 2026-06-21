@@ -1,23 +1,14 @@
+#include <algorithm>
 #include <iostream>
 #include <iterator>
-#include <algorithm>
 #include <tuple>
 #include <unordered_map>
 #include <vector>
 
 struct Result {
-  int a;
-  int b;
-  bool find {true};
-  bool operator=(const Result& other) {
-    if (!(find && other.find)) 
-      return false;
-    return a == other.a && b == other.b;
-  }
+  int a{-1};
+  int b{-1};
+  bool find{false};
 };
 
-std::vector<int> ConstructIntVector();
-
-Result FindSumHash();
-
-Result FindSumPtr();
+Result FindSumHash(int sum, std::size_t size, const std::vector<int>& vec);
