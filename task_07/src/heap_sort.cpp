@@ -1,8 +1,8 @@
 #include "heap_sort.hpp"
 
-std::tuple<int, int> GetChildren(int idx) { return {2 * idx + 1, 2 * idx + 2}; }
+#include <tuple>
 
-inline int GetParent(int idx) { return (idx - 1) / 2; }
+std::tuple<int, int> GetChildren(int idx) { return {2 * idx + 1, 2 * idx + 2}; }
 
 int GetMaxChildIdx(int idx, int end, const std::vector<int>& vec) {
   auto [left, right] = GetChildren(idx);

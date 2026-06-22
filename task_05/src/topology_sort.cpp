@@ -1,5 +1,7 @@
 #include "topology_sort.hpp"
 
+#include <stack>
+
 std::vector<int> TopologySort(std::size_t N,
                               const std::vector<int>& temperature) {
   std::stack<int> stack;

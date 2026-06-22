@@ -1,6 +1,7 @@
 #include "hash_table.hpp"
 
 #include <stdexcept>
+#include <utility>
 
 const int HashTable::kDefaultCapacity = 8;
 const double HashTable::kMaxLoadFactor = 0.75;

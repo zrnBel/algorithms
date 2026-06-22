@@ -1,5 +1,7 @@
 #include "stack.hpp"
 
+#include <stdexcept>
+
 void Stack::Push(int value) { data_.push_back(value); }
 
 int Stack::Pop() {

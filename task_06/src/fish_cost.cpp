@@ -1,5 +1,7 @@
 #include "fish_cost.hpp"
 
+#include <deque>
+
 long long MinFishCost(std::size_t N, std::size_t K,
                       const std::vector<int>& prices) {
   std::deque<std::size_t> min_costs;

@@ -1,5 +1,7 @@
 #include "find_sum.hpp"
 
+#include <unordered_map>
+
 Result FindSumHash(int sum, std::size_t size, const std::vector<int>& vec) {
   if (size == 1) return Result();
 

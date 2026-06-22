@@ -1,5 +1,7 @@
 #include "find_subsequence.hpp"
 
+#include <unordered_map>
+
 int FindSubsequence(const std::string& sequence,
                     const std::string& subsequence) {
   std::unordered_map<char, std::size_t> target;
