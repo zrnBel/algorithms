@@ -1,7 +1,7 @@
 #pragma once
 
-#include <stdexcept>
 #include <stack>
+#include <stdexcept>
 #include <vector>
 
 class Stack {

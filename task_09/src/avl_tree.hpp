@@ -1,14 +1,5 @@
 #pragma once
 
-struct Node {
-  int key;
-  int height;
-  int size;
-  Node* left;
-  Node* right;
-  Node(int k);
-};
-
 class AvlTree {
  public:
   AvlTree();
