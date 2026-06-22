@@ -1,7 +1,5 @@
 #pragma once
 
-#include <algorithm>
-#include <limits>
 #include <vector>
 
 struct Lesson {
@@ -9,7 +7,8 @@ struct Lesson {
   double end;
 
   bool operator==(const Lesson& other) const {
-    return other.start == start && other.end == end;
+    return std::abs(other.start - start) < 1e-9 &&
+           std::abs(other.end - end) < 1e-9;
   }
 };
 

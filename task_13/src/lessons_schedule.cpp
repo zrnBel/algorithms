@@ -1,5 +1,8 @@
 #include "lessons_schedule.hpp"
 
+#include <algorithm>
+#include <limits>
+
 std::vector<Lesson> FindMaxLessonsCount(std::vector<Lesson> lessons) {
   std::sort(
       lessons.begin(), lessons.end(),
