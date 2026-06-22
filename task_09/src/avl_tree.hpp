@@ -21,6 +21,17 @@ class AvlTree {
   int Size() const;
 
  private:
+  struct Node {
+    int key;
+    int height;
+    int size;
+    Node* left;
+    Node* right;
+    Node(int k);
+  };
+
+  Node* root_;
+
   static int Height(Node* node);
   static int SizeOf(Node* node);
   static int BalanceFactor(Node* node);
@@ -34,6 +45,4 @@ class AvlTree {
   static Node* RemoveNode(Node* node, int key);
   static bool FindNode(Node* node, int key);
   static void DestroyTree(Node* node);
-
-  Node* root_;
 };

@@ -30,7 +30,7 @@ void AvlTree::UpdateNode(Node* node) {
   node->size = SizeOf(node->left) + SizeOf(node->right) + 1;
 }
 
-Node* AvlTree::RotateRight(Node* node) {
+AvlTree::Node* AvlTree::RotateRight(Node* node) {
   Node* new_root = node->left;
   node->left = new_root->right;
   new_root->right = node;
@@ -39,7 +39,7 @@ Node* AvlTree::RotateRight(Node* node) {
   return new_root;
 }
 
-Node* AvlTree::RotateLeft(Node* node) {
+AvlTree::Node* AvlTree::RotateLeft(Node* node) {
   Node* new_root = node->right;
   node->right = new_root->left;
   new_root->left = node;
@@ -48,7 +48,7 @@ Node* AvlTree::RotateLeft(Node* node) {
   return new_root;
 }
 
-Node* AvlTree::Balance(Node* node) {
+AvlTree::Node* AvlTree::Balance(Node* node) {
   UpdateNode(node);
   if (BalanceFactor(node) == 2) {
     if (BalanceFactor(node->right) < 0) {
@@ -65,7 +65,7 @@ Node* AvlTree::Balance(Node* node) {
   return node;
 }
 
-Node* AvlTree::InsertNode(Node* node, int key) {
+AvlTree::Node* AvlTree::InsertNode(Node* node, int key) {
   if (node == nullptr) {
     return new Node(key);
   }
@@ -79,11 +79,11 @@ Node* AvlTree::InsertNode(Node* node, int key) {
   return Balance(node);
 }
 
-Node* AvlTree::FindMin(Node* node) {
+AvlTree::Node* AvlTree::FindMin(Node* node) {
   return node->left == nullptr ? node : FindMin(node->left);
 }
 
-Node* AvlTree::RemoveMin(Node* node) {
+AvlTree::Node* AvlTree::RemoveMin(Node* node) {
   if (node->left == nullptr) {
     return node->right;
   }
@@ -91,7 +91,7 @@ Node* AvlTree::RemoveMin(Node* node) {
   return Balance(node);
 }
 
-Node* AvlTree::RemoveNode(Node* node, int key) {
+AvlTree::Node* AvlTree::RemoveNode(Node* node, int key) {
   if (node == nullptr) {
     return nullptr;
   }

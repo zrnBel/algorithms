@@ -9,9 +9,9 @@ class HashTable {
   HashTable(int capacity);
 
   void Insert(int key, int value);
-  int Get(int key);
+  int Get(int key) const;
   void Remove(int key);
-  bool Contains(int key);
+  bool Contains(int key) const;
   int Size() const;
   bool Empty() const;
 

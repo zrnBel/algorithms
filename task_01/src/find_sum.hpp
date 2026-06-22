@@ -1,7 +1,5 @@
-#include <algorithm>
-#include <iostream>
-#include <iterator>
-#include <tuple>
+#pragma once
+
 #include <unordered_map>
 #include <vector>
 

@@ -56,7 +56,7 @@ void HashTable::Insert(int key, int value) {
   ++size_;
 }
 
-int HashTable::Get(int key) {
+int HashTable::Get(int key) const {
   int index = BucketIndex(key, buckets_.size());
 
   for (std::size_t i = 0; i != buckets_[index].size(); ++i) {
@@ -80,7 +80,7 @@ void HashTable::Remove(int key) {
   }
 }
 
-bool HashTable::Contains(int key) {
+bool HashTable::Contains(int key) const {
   int index = BucketIndex(key, buckets_.size());
 
   for (std::size_t i = 0; i != buckets_[index].size(); ++i) {

@@ -6,5 +6,5 @@ int main() {
   std::string sequence, subsequence;
   std::cin >> sequence >> subsequence;
 
-  std::cout << FindSupsequence(sequence, subsequence) << std::endl;
+  std::cout << FindSubsequence(sequence, subsequence) << std::endl;
 }

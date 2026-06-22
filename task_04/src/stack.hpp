@@ -6,10 +6,10 @@
 
 class Stack {
  public:
-  void Push(int value) { data_.push_back(value); }
+  void Push(int value);
   int Pop();
-  int Top() { return data_.back(); }
-  bool Empty() { return data_.empty(); }
+  int Top() const;
+  bool Empty() const;
 
  private:
   std::vector<int> data_;
@@ -18,8 +18,10 @@ class Stack {
 class MinStack {
  public:
   void Push(int value);
-  int Pop() { return minimum_.Pop(), data_.Pop(); }
-  int GetMin() { return minimum_.Top(); }
+  int Pop();
+  int GetMin() const;
+  int Top() const;
+  bool Empty() const;
 
  private:
   Stack data_;

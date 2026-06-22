@@ -6,8 +6,6 @@
 int main() {
   std::size_t n_days;
   std::cin >> n_days;
-  // std::vector<int> temperature_data(std::istream_iterator<int>(std::cin),
-  // std::istream_iterator<int>());
   std::vector<int> temperature_data;
   for (std::size_t i{0}; i != n_days; ++i) {
     int temp;

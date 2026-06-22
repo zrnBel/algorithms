@@ -5,7 +5,7 @@ std::vector<Lesson> FindMaxLessonsCount(std::vector<Lesson> lessons) {
       lessons.begin(), lessons.end(),
       [](const Lesson& lhs, const Lesson& rhs) { return lhs.end < rhs.end; });
 
-  double last_end;
+  double last_end = -std::numeric_limits<double>::infinity();
   std::vector<Lesson> result_schedule;
   for (const auto& lesson : lessons) {
     if (lesson.start >= last_end) {

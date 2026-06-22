@@ -30,20 +30,6 @@ void SiftDown(int begin, int end, std::vector<int>& vec) {
   }
 }
 
-void SiftUp(int begin, int end, std::vector<int>& vec) {
-  int iter = end - 1;
-  while (true) {
-    if (iter <= begin) break;
-
-    if (int parent_idx = GetParent(iter); vec[iter] > vec[parent_idx]) {
-      std::swap(vec[parent_idx], vec[iter]);
-      iter = parent_idx;
-      continue;
-    }
-    break;
-  }
-}
-
 std::vector<int> ConstructHeap(const std::vector<int>& vec) {
   std::vector<int> heap = vec;
   for (int i{static_cast<int>(heap.size()) / 2 - 1}; i >= 0; --i)
